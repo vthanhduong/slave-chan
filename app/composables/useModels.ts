@@ -1,6 +1,6 @@
 export function useModels() {
   const models = [
-    'misttral/ministral-3b',
+    'mistral/ministral-3b',
     'mistral/mistral-small',
     'mistral/mistral-medium',
     'mistral/mistral-large'
