@@ -1,11 +1,12 @@
 export function useModels() {
   const models = [
-    'openai/gpt-5-nano',
-    'anthropic/claude-haiku-4.5',
-    'google/gemini-2.5-flash'
+    'misttral/ministral-3b',
+    'mistral/mistral-small',
+    'mistral/mistral-medium',
+    'mistral/mistral-large'
   ]
 
-  const model = useCookie<string>('model', { default: () => 'openai/gpt-5-nano' })
+  const model = useCookie<string>('model', { default: () => 'mistral/mistral-medium' })
 
   return {
     models,
