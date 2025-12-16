@@ -60,8 +60,8 @@ const quickChats = [
 
     <template #body>
       <UContainer class="flex-1 flex flex-col justify-center gap-4 sm:gap-6 py-8">
-        <h1 class="text-3xl sm:text-4xl text-highlighted font-bold">
-          How can I help you today?
+        <h1 class="text-2xl sm:text-3xl text-highlighted font-bold">
+          i do whatever i want and bbi u better stfu cuz u did no shit :)
         </h1>
 
         <UChatPrompt
