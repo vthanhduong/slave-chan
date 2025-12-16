@@ -61,7 +61,7 @@ const quickChats = [
     <template #body>
       <UContainer class="flex-1 flex flex-col justify-center gap-4 sm:gap-6 py-8">
         <h1 class="text-2xl sm:text-3xl text-highlighted font-bold">
-          i do whatever i want and bbi u better stfu cuz u did no shit :)
+          i do whatever i want and bbi u better stfu cuz u aint do shit :)
         </h1>
 
         <UChatPrompt
