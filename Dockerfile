@@ -1,7 +1,15 @@
 # Stage 1: Install & Build
 FROM node:22-alpine AS builder
+
+ARG DATABASE_URL
+ARG AI_GATEWAY_API_KEY
+
 WORKDIR /app
 COPY package*.json ./
+
+RUN echo "DATABASE_URL=$DATABASE_URL" >> .env && \
+  echo "AI_GATEWAY_API_KEY=$AI_GATEWAY_API_KEY" >> .env
+
 RUN npm install
 COPY . .
 RUN npm run build
