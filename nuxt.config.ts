@@ -26,13 +26,15 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    sessionPassword: process.env.NUXT_SESSION_PASSWORD,
+    sessionPassword: '',
     oauth: {
       github: {
-        clientId: process.env.NUXT_OAUTH_GITHUB_CLIENT_ID,
-        clientSecret: process.env.NUXT_OAUTH_GITHUB_CLIENT_SECRET
+        clientId: '',
+        clientSecret: ''
       }
-    }
+    },
+    aiGatewayApiKey: '',
+    databaseUrl: ''
   },
 
   experimental: {
@@ -48,13 +50,7 @@ export default defineNuxtConfig({
   },
 
   hub: {
-    db: {
-      dialect: 'postgresql',
-      driver: 'postgres-js',
-      connection: {
-        connectionString: process.env.DATABASE_URL
-      }
-    }
+    db: 'postgresql'
   },
 
   eslint: {
