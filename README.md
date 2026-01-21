@@ -41,8 +41,8 @@ A modern, feature-rich AI chatbot application built with Nuxt 4 and Vercel AI SD
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/vthanhduong/nuxt-ai-chatbot.git
-cd nuxt-ai-chatbot
+git clone https://github.com/vthanhduong/slave-chan.git
+cd slave-chan
 ```
 
 ### 2. Install dependencies
@@ -119,7 +119,7 @@ The application will be available at `http://localhost:3000`
 docker build \
   --build-arg DATABASE_URL=your-database-url \
   --build-arg AI_GATEWAY_API_KEY=your-api-key \
-  -t nuxt-ai-chatbot .
+  -t slave-chan .
 ```
 
 ### Run the container
@@ -129,13 +129,13 @@ docker run -p 3000:3000 \
   -e NUXT_SESSION_PASSWORD=your-session-password \
   -e NUXT_OAUTH_GITHUB_CLIENT_ID=your-github-client-id \
   -e NUXT_OAUTH_GITHUB_CLIENT_SECRET=your-github-client-secret \
-  nuxt-ai-chatbot
+  slave-chan
 ```
 
 ## 📁 Project Structure
 
 ```
-nuxt-ai-chatbot/
+slave-chan/
 ├── app/
 │   ├── assets/           # CSS and static assets
 │   ├── components/       # Vue components
