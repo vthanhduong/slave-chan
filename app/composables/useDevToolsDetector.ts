@@ -2,22 +2,32 @@
 export const useDevToolsDetector = () => {
   if (import.meta.server) return
 
-  const detect = () => {
-    const startTime = performance.now()
+  onMounted(() => {
+    if (import.meta.dev) return
 
-    // eslint-disable-next-line no-debugger
-    debugger
-
-    const endTime = performance.now()
-
-    if (endTime - startTime > 100) {
+    const warning = () => {
       console.log('%cSTOP!!! Yamete kudasai!!!', 'color: red; font-size: 80px; font-weight: bold; text-shadow: 3px 3px 0 rgb(217,31,38) ;')
       console.log('%cmày định làm j?', 'font-size: 20px; color: yellow; background: black; padding: 10px;')
     }
+
+    const devtools = {
+      isOpen: false
+    }
+
+    const element = new Image()
+    Object.defineProperty(element, 'id', {
+      get: () => {
+        warning()
+        throw new Error("DevTools detected");
+      }
+    })
+
+    const timer = setInterval(() => {
+      console.log(element)
+      console.clear()
+      onUnmounted(() => clearInterval(timer))
+    })
   }
 
-  onMounted(() => {
-    const timer = setInterval(detect, 2000)
-    onUnmounted(() => clearInterval(timer))
-  })
-}
+
+
